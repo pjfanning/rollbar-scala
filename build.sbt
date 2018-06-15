@@ -18,11 +18,11 @@ val json4sVersion = "3.5.4"
 val scalatestVersion = "3.0.5"
 
 libraryDependencies ++= Seq(
-    "org.slf4j" % "slf4j-api" % slf4jVersion % "provided",
+    "org.slf4j" % "slf4j-api" % slf4jVersion,
     "net.databinder.dispatch" %% "dispatch-core" % dispatchVersion,
+    "org.json4s" %% "json4s-jackson" % json4sVersion,
     "log4j" % "log4j" % log4jVersion % "provided",
     "ch.qos.logback" % "logback-classic" % logbackVersion % "provided",
-    "org.json4s" %% "json4s-jackson" % json4sVersion,
     "org.scalatest" %% "scalatest" % scalatestVersion % "test"
 )
 
