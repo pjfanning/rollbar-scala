@@ -8,6 +8,8 @@ description := "Notifier library for integrating Scala apps with the Rollbar ser
 
 scalaVersion := "2.12.6"
 
+crossScalaVersions := Seq("2.11.12", scalaVersion.value)
+
 val slf4jVersion = "1.7.25"
 val dispatchVersion = "0.13.4"
 val log4jVersion = "1.2.17"
