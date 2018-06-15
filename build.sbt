@@ -12,7 +12,7 @@ val slf4jVersion = "1.7.25"
 val dispatchVersion = "0.13.4"
 val log4jVersion = "1.2.17"
 val logbackVersion = "1.2.3"
-val json4sVersion = "3.2.11"
+val json4sVersion = "3.5.4"
 val scalatestVersion = "3.0.5"
 
 libraryDependencies ++= Seq(
