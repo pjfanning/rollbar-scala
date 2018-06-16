@@ -1,6 +1,6 @@
 # rollbar-scala
-[![Travis master branch](https://img.shields.io/travis/storecove/rollbar-scala/master.svg)](https://travis-ci.org/storecove/rollbar-scala) [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/storecove/rollbar-scala?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-[![GitHub release](https://img.shields.io/github/release/storecove/rollbar-scala.svg)](https://github.com/storecove/rollbar-scala/releases) [![GitHub issues](https://img.shields.io/github/issues/storecove/rollbar-scala.svg)](https://github.com/storecove/rollbar-scala/issues) [![GitHub license](https://img.shields.io/github/license/storecove/rollbar-scala.svg)](https://github.com/storecove/rollbar-scala/blob/master/LICENSE)
+
+Abandoned in favour of com.rollback [rollback-logback](https://mvnrepository.com/artifact/com.rollbar/rollbar-logback/1.2.0)
 
 Notifier library for integrating Scala apps with the Rollbar service.
 
@@ -13,16 +13,13 @@ For SBT:
 
 ```scala
 libraryDependencies ++= Seq(
-    "com.storecove" %% "rollbar-scala" % "1.0",
-    "net.databinder.dispatch" %% "dispatch-core" % "0.11.2",
-    "org.json4s" %% "json4s-jackson" % "3.2.11",
-    "org.slf4j" % "slf4j-api" % "1.7.12"
+    "io.kontainers" %% "rollbar-scala" % "1.2.0-SNAPSHOT"
 )
 ```
 
 In addition to these, you will need also an SLF4J logger implementation.
 
-This library ships with concrete Rollbar appenders for both Log4j and Logback, so (if you haven't already done it) add one of them to your dependencies.
+This library ships with concrete Rollbar appenders for both Log4j and Logback, so (if you haven't already done it) add one of them to your dependencies (eg "ch.qos.logback" % "logback-classic" % "1.2.3").
 
 ## Setup
 
