@@ -33,7 +33,7 @@ import org.json4s.jackson.JsonMethods._
 import org.scalatest.{FlatSpec, Matchers}
 import org.slf4j.{LoggerFactory, MDC}
 
-import scala.collection.JavaConverters.mapAsScalaMap
+import scala.collection.JavaConverters._
 import scala.collection.mutable
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.util.{Failure, Success}
@@ -145,7 +145,7 @@ class RollbarNotifierSpec extends FlatSpec with Matchers {
         if (mdc == null) {
             mutable.Map.empty[String, String]
         } else {
-            mapAsScalaMap(mdc)
+            mdc.asScala
         }
     }
 

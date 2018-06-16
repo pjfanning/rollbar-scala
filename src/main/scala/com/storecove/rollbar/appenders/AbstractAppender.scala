@@ -26,7 +26,7 @@ package com.storecove.rollbar.appenders
 import com.storecove.rollbar.{RollbarNotifier, RollbarNotifierDefaults, RollbarNotifierFactory}
 import org.slf4j.MDC
 
-import scala.collection.JavaConverters.mapAsScalaMap
+import scala.collection.JavaConverters._
 import scala.collection.mutable
 
 /**
@@ -79,7 +79,7 @@ trait AbstractAppender {
         if (mdc == null) {
             mutable.Map.empty[String, String]
         } else {
-            mapAsScalaMap(mdc)
+            mdc.asScala
         }
     }
 
