@@ -33,7 +33,7 @@ import org.json4s.jackson.JsonMethods._
 import org.scalatest.{FlatSpec, Matchers}
 import org.slf4j.{LoggerFactory, MDC}
 
-import scala.collection.JavaConversions._
+import scala.collection.JavaConverters.mapAsScalaMap
 import scala.collection.mutable
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.util.{Failure, Success}

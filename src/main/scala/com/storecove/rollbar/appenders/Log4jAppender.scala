@@ -35,8 +35,6 @@ class Log4jAppender extends AppenderSkeleton with AbstractAppender {
     override def append(event: LoggingEvent): Unit = {
         if (enabled) {
             try {
-                logBuffer.enqueueFinite(this.layout.format(event).trim, limit)
-
                 if (event.getLevel.isGreaterOrEqual(notifyLevel)) {
                     val hasThrowable = event.getThrowableInformation != null || event.getMessage.isInstanceOf[Throwable]
                     if (!onlyThrowable || hasThrowable) {

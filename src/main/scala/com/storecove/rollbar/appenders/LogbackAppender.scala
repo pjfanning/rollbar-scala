@@ -26,7 +26,6 @@ package com.storecove.rollbar.appenders
 import ch.qos.logback.classic.Level
 import ch.qos.logback.classic.spi.{ILoggingEvent, ThrowableProxy}
 import ch.qos.logback.core.UnsynchronizedAppenderBase
-import org.apache.log4j.helpers.LogLog
 
 /**
  * Created by acidghost on 08/06/15.
@@ -43,7 +42,10 @@ class LogbackAppender extends UnsynchronizedAppenderBase[ILoggingEvent] with Abs
                     }
                 }
             } catch {
-                case e: Exception => LogLog.error("Error sending error notification! error=" + e.getClass.getName + " with message=" + e.getMessage)
+                case t: Throwable => {
+                    println("Error sending error notification! error=" +
+                        t.getClass.getName + " with message=" + t.getMessage)
+                }
             }
         }
     }
