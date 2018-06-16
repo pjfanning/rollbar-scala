@@ -11,7 +11,7 @@ scalaVersion := "2.12.6"
 crossScalaVersions := Seq("2.11.12", scalaVersion.value)
 
 val slf4jVersion = "1.7.25"
-val dispatchVersion = "0.13.4"
+val dispatchVersion = "0.14.0"
 val log4jVersion = "1.2.17"
 val logbackVersion = "1.2.3"
 val json4sVersion = "3.5.4"
@@ -19,7 +19,7 @@ val scalatestVersion = "3.0.5"
 
 libraryDependencies ++= Seq(
     "org.slf4j" % "slf4j-api" % slf4jVersion,
-    "net.databinder.dispatch" %% "dispatch-core" % dispatchVersion,
+    "org.dispatchhttp" %% "dispatch-core" % dispatchVersion,
     "org.json4s" %% "json4s-jackson" % json4sVersion,
     "log4j" % "log4j" % log4jVersion % "provided",
     "ch.qos.logback" % "logback-classic" % logbackVersion % "provided",
